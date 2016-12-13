@@ -1,0 +1,16 @@
+version: '2'
+services:
+    tunnel_1:
+        image: henrrich/docker-sauce-connect:latest
+        restart: always
+        expose: 
+          - 4445
+        ports: 
+          - 4445
+        command: -u <SauceLabs account> -k <SauceLabs access key> -i my_sc_pool -p
+    tunnel_2:
+        extends: tunnel_1
+        depends_on:
+          - "tunnel_1"
+        command: -u <SauceLabs account> -k <SauceLabs access key> -i my_sc_pool -p -d 30s
+    
