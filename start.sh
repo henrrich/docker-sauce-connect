@@ -21,7 +21,7 @@ USAGE
 
 start_pool_tunnel()
 {
-    exec $SC -u $USER -k $ACCESS_KEY --tunnel-identifier $TUNNEL_ID --no-remove-colliding-tunnels --wait-tunnel-shutdown 
+    exec $SC -u $USER -k $ACCESS_KEY --tunnel-identifier $TUNNEL_ID --no-remove-colliding-tunnels 
 }
 
 start_standalone_tunnel()
