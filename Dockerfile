@@ -3,7 +3,7 @@ MAINTAINER Henrrich <huanghe389@gmail.com>
 
 ENV workdir /usr/local/sauce-connect
 
-ARG SC_VERSION=4.4.6
+ARG SC_VERSION=4.4.12
 
 WORKDIR ${workdir}
 
